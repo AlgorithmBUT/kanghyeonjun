@@ -1,4 +1,4 @@
-package 프로그래머스.Lv1;
+package 프로그래머스.Lv1.햄버거만들기;
 
 class Solution {
     public int solution(int[] ingredient) {

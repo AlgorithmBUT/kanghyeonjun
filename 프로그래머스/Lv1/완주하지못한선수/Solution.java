@@ -1,4 +1,4 @@
-package 프로그래머스.Lv1;
+package 프로그래머스.Lv1.완주하지못한선수;
 
 import java.util.*;
 

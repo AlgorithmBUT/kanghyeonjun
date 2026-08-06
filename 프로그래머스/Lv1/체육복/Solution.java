@@ -1,4 +1,4 @@
-package 프로그래머스.Lv1;
+package 프로그래머스.Lv1.체육복;
 
 import java.util.*;
 
