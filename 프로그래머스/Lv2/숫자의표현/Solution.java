@@ -8,12 +8,10 @@ class Solution {
             int tmp=0;
             for (int i=start; i<=n; i++){
                 tmp+=i;
-
                 if(tmp==n){
                     answer++;
                     break;
                 }
-
                 if (tmp>n){
                     break;
                 }
