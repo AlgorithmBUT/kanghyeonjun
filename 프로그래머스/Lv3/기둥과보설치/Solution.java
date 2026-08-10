@@ -10,8 +10,8 @@ class Solution {
     public int[][] solution(int n, int[][] build_frame) {
         
         for (int i=0; i<build_frame.length; i++){
-          int x = build_frame[i][0]; // x좌표
-          int y = build_frame[i][1]; // y좌표
+          int x = build_frame[i][0]; // x 좌표
+          int y = build_frame[i][1]; // y 좌표
           int a = build_frame[i][2]; // 0: 기둥, 1: 보 
           int b = build_frame[i][3]; // 0: 제거, 1: 설치
           // 설치
@@ -32,7 +32,8 @@ class Solution {
             } else {
               bo.remove(Arrays.asList(x,y,1));
             }
-            // 나머지 전부 다 설치할 수 있는지 check함수로 확인하고, 설치를 못 한다면 다시 추가
+            // 나머지를 전부 다 설치할 수 있는지 check함수로 확인하고, 
+            // 설치를 못 한다면 다시 추가
             if (!check()){
               if (a==0){
                 wall.add(Arrays.asList(x,y,0));
@@ -58,6 +59,7 @@ class Solution {
           res[i][2]=lst.get(2);
           i++;
         }
+
         // 정렬
         Arrays.sort(res, (a,b) -> {
           if (a[0]==b[0]){
