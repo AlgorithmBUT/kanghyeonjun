@@ -1,5 +1,7 @@
 package 백트래킹연습;
 
+//10진수를 2진수 문자열로 변환
+
 import java.io.*;
 
 public class practice3 {
