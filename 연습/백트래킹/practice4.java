@@ -1,4 +1,4 @@
-package 백트래킹연습2;
+package 백트래킹;
 
 import java.util.*;
 

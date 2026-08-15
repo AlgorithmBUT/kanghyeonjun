@@ -1,4 +1,4 @@
-package 백트래킹연습;
+package 재귀;
 
 //문자열이 palindrome인지
 

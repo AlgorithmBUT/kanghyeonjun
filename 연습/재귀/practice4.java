@@ -1,4 +1,4 @@
-package 백트래킹연습;
+package 재귀;
 
 //크기가 n인 int[] arr에서 최대값 찾기
 
@@ -7,7 +7,7 @@ public class practice4 {
     int n = 10;
     int[] arr = {11,45,32,81,93,6,5,27,72,56};
 
-    System.out.println(rec(0, arr, 0, 10));
+    System.out.println(rec(0, arr, 0, n));
   }
 
   static int rec (int start, int[] arr, int max, int target){

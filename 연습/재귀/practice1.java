@@ -1,4 +1,4 @@
-package 백트래킹연습;
+package 재귀;
 
 //n^m 구하기
 

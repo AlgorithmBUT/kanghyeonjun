@@ -1,4 +1,4 @@
-package 백트래킹연습;
+package 재귀;
 
 //구구단
 
