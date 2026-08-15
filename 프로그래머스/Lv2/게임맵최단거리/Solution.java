@@ -9,18 +9,18 @@ class Solution {
 
     public int solution(int[][] maps) {
 
-        Deque<int[]> dq = new ArrayDeque<>();
-        dq.offerFirst(new int[]{0,0});
+        Deque<point> dq = new ArrayDeque<>();
+        dq.offerFirst(new point (0,0));
 
         while(dq.size()!=0){
-            int [] cur = dq.pollFirst();
+            point cur = dq.pollFirst();
 
             for (int d=0; d<4; d++){
-                int ny = cur[0] + dy[d];
-                int nx = cur[1] + dx[d];
+                int ny = cur.y + dy[d];
+                int nx = cur.x + dx[d];
                 if (check(ny, nx, maps)){
-                    dq.offerLast(new int[]{ny,nx});
-                    maps[ny][nx]=maps[cur[0]][cur[1]]+1;
+                    dq.offerLast(new point(ny,nx));
+                    maps[ny][nx]=maps[cur.y][cur.x]+1;
                 }
             }
         }
@@ -33,5 +33,14 @@ class Solution {
             return false;
         }
         return true;
+    }
+}
+
+class point {
+    int y;
+    int x;
+    public point(int y, int x){
+        this.y=y;
+        this.x=x;
     }
 }
