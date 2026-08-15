@@ -10,9 +10,7 @@ public class practice2 {
     static int[] visited = new int [7];
 
     static {
-        for (int i=0; i<visited.length; i++){
-        visited[i]=-1;
-        }
+        Arrays.fill(visited, -1);
     }
     
     public static void main(String[] args) {
