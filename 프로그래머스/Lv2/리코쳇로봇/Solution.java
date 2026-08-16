@@ -14,7 +14,7 @@ class Solution {
             Arrays.fill(visited[i], -1);
         }
 
-        Deque<point> dq = new ArrayDeque<>();
+        Deque<Point> dq = new ArrayDeque<>();
         int goaly=0, goalx=0;
         char realboard[][] = new char[board.length][];
 
@@ -23,7 +23,7 @@ class Solution {
             realboard[i]=board[i].toCharArray();
             if (board[i].contains("R")){
                 int tmp = board[i].indexOf('R');
-                dq.offer(new point(i, tmp));
+                dq.offer(new Point(i, tmp));
                 visited[i][tmp]=0;
             }
             if (board[i].contains("G")){
@@ -31,11 +31,11 @@ class Solution {
                 goalx=board[i].indexOf('G');
             }
         }
-        
+
         // bfs 시작
         while (dq.size()!=0){
             
-            point cur = dq.pollFirst();
+            Point cur = dq.pollFirst();
 
             // 4방향 탐색
             for (int d=0; d<4; d++){
@@ -54,7 +54,7 @@ class Solution {
                 nx=nx-dx[d];
                 // 방문하지 않닸다면 최단 거리 갱신
                 if (visited[ny][nx]==-1){
-                    dq.offerLast(new point(ny,nx));
+                    dq.offerLast(new Point(ny,nx));
                     visited[ny][nx]=visited[cur.y][cur.x]+1;
                 }
             }
@@ -71,10 +71,11 @@ class Solution {
     }
 }
 
-class point{
+class Point{
     int y;
     int x;
-    public point(int y, int x){
+
+    public Point(int y, int x){
         this.y=y;
         this.x=x;
     }
