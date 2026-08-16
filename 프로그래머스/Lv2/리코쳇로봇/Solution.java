@@ -30,8 +30,8 @@ class Solution {
                 goaly=i;
                 goalx=board[i].indexOf('G');
             }
-            
         }
+        
         // bfs 시작
         while (dq.size()!=0){
             
@@ -59,7 +59,7 @@ class Solution {
                 }
             }
         }
-        
+
         return visited[goaly][goalx];
     }
 
