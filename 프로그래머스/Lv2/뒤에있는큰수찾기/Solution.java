@@ -14,7 +14,7 @@ class Solution {
                 stack.pollLast();
             }
 
-            if(stack.size()==0 || numbers[i]>=stack.peekLast()){
+            if(stack.size()==0){
                 ans[i]=-1;
             } else {
                 ans[i]=stack.peekLast();
