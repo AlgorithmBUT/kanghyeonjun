@@ -51,14 +51,16 @@ public class Solution {
   }
 
   static void dfs(int d){
+    // 모든 재료 선택/미선택 결정 완료
     if (d == N){
 
       boolean valid = true;
 
+      // 현재 부분집합 검사
       for (int i=0; i < N; i++){
-
+        // 선택 안 했다면 볼 필요 X
         if (!selected[i]) continue;
-
+        // 싫어하는 재료 선택되어 있으면 false
         for (int h : hate[i]){
           if (selected[h]){
             valid = false;
@@ -68,15 +70,15 @@ public class Solution {
 
         if (!valid) break;
       }
-
+      // 문제가 없었다면 부분집합
       if (valid) cnt++;
 
       return;
     }
-
+    // d번 재료 선택
     selected[d]=false;
     dfs(d+1);
-
+    // d번 재료 선택 X
     selected[d]=true;
     dfs(d+1);
   }
