@@ -154,7 +154,6 @@ public class Solution2{
 
     // 고름
     if ((cur & hate[d]) == 0){
-
       dfs (d+1, cur | (1<<d));
     }
   }
