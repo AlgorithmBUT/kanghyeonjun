@@ -59,6 +59,7 @@ public class Solution {
         }
     }
 
+    // 먹히지 않은 거 탐색
     static void dfs(int y, int x, int day) {
         if (y < 0 || y >= N || x < 0 || x >= N) return;
         if (board[y][x] <= day) return;
