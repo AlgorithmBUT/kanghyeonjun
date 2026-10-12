@@ -34,7 +34,7 @@ public class Solution {
 
             for (int i=1; i<=12; i++){
                 // 1일 이용권
-                dp[i] = Math.min(dp[i], costs[0]*months[i-1] + dp[i-1]);
+                dp[i] = Math.min(dp[i], costs[0] * months[i-1] + dp[i-1]);
 
                 // 1달 이용권
                 dp[i] = Math.min(dp[i], costs[1] + dp[i-1]);
@@ -45,8 +45,8 @@ public class Solution {
                 }
 
                 // 1년 이용권
-                if (i>=12){
-                    dp[i] = Math.min(dp[i], costs[3] + dp[i-12]);
+                if (i==12){
+                    dp[i] = Math.min(dp[i], costs[3]);
                 }
             }
 
